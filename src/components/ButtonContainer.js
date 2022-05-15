@@ -7,19 +7,19 @@ function ButtonContainer () {
             switch (keyCode) {
                 case 'ArrowUp':
                 case 'KeyW':
-                    console.log('up-key');
+                    sendMessage(e, 'up');
                     break;
                 case 'ArrowLeft':
                 case 'KeyA':
-                    console.log('left-key');
+                    sendMessage(e, 'left');
                     break;
                 case 'ArrowDown':
                 case 'KeyS':
-                    console.log('down-key');
+                    sendMessage(e, 'down');
                     break;
                 case 'ArrowRight':
                 case 'KeyD':
-                    console.log('right-key');
+                    sendMessage(e, 'right');
                     break;
                 default:
                     break;
@@ -41,16 +41,18 @@ function ButtonContainer () {
     return(
         <div>
             <table>
-                <tr>
-                    <td></td>
-                    <td><ArrowUp size='50' onClick={(e) => sendMessage(e, 'up-click')}/></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><ArrowLeft size='50' onClick={(e) => sendMessage(e, 'left-click')}/></td>
-                    <td><ArrowDown size='50' onClick={(e) => sendMessage(e, 'down-click')}/></td>
-                    <td><ArrowRight size='50' onClick={(e) => sendMessage(e, 'right-click')}/></td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td><ArrowUp size='50' onClick={(e) => sendMessage(e, 'up')}/></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><ArrowLeft size='50' onClick={(e) => sendMessage(e, 'left')}/></td>
+                        <td><ArrowDown size='50' onClick={(e) => sendMessage(e, 'down')}/></td>
+                        <td><ArrowRight size='50' onClick={(e) => sendMessage(e, 'right')}/></td>
+                    </tr>
+                </tbody>
             </table>            
         </div>
     );
